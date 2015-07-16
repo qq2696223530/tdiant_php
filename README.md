@@ -4,3 +4,5 @@
 
 本人开发(java+php+nodejs)   现在在上海  任职ios开发
 沪漂ing  求认识更多位于江浙沪的coder
+
+![image](https://github.com/fengss/tdiant_php/blob/master/img/1.png?raw=true)
