@@ -1,0 +1,90 @@
+
+<html>
+<include file="Common:header"/>
+<body>
+
+<!--侧边栏-->
+<include file="Common:left_menu"/>
+<!--右侧整体内容-->
+<div class="content">
+    <!--用户信息栏-->
+    <include file="Common:user"/>
+    <div class="container">
+        <div class="container-fluid">
+
+            <div class="container_form">
+				<div class="container_tab">
+                    <ul class="clearFix">
+                                                    <li class="tab tab1 tab_active"><a href="./houtai-7.htm">代理申请</a></li>
+                        
+                        
+                        <li class="tab tab4"><a href="./houtwai-7-1.htm">代理说明</a></li>
+                    </ul>
+                </div>
+                
+            	                    
+                                            <div class="tab_content tab_content1 container_form_content">
+                            <div class="control-group mission_name clearFix">
+                                <label class="control-label essential">* QQ</label>
+                                <div class="controls">
+                                    <input type="text" name="agent_qq" id="agent_qq" class="container_forms">
+                                    <p class="exp">（请填写你的QQ联系方式，管理员审核之前会和你联系）</p>
+                                </div>
+                            </div>
+
+                            <div class="control-group mission_name clearFix">
+                                <label class="control-label essential">* 手机号码</label>
+                                <div class="controls">
+                                    <input type="text" name="agent_phone" id="agent_phone" class="container_forms">
+                                    <p class="exp">（请填写你的手机号码，管理员审核之前会和你联系）</p>
+                                </div>
+                            </div>
+
+                            <div class="control-group mission_name clearFix">
+                                <label class="control-label essential">* 代理经验</label>
+                                <div class="controls">
+                                    <textarea name="agent_description" id="agent_description" class="container_forms" style="width:300px; height:100px;"></textarea>
+                                    <p class="exp">（申请代理有一定的资历要求，请描述你曾经在其他平台的代理工作经验）</p>
+                                </div>
+                            </div>
+
+                            <div class="actions clearFix">
+                                <p style="margin-left:150px; margin-bottom:10px; font-size:14px;" id="trade_hint"></p>
+                                <a href="javascript:void(0);" style="margin-left:150px; " class="btn confirm post_agent_apply_btn" id="post_agent_apply_btn">提交申请</a>
+                                <span style="font-size:14px; color:#ff0000">（代理实行用户自主申请，管理员审核制度，请认真填写你的联系方式以及相关经验）</span>
+                            </div>
+                        </div>
+                    				            
+            </div>
+
+            <div class="container_form">
+                <div class="container_form_title">
+                    <span class="icon"><i class="icon-th"></i></span>
+                    <h5>我的申请记录</h5>
+                </div>
+                
+                <div class="container_form_content">
+                    <table>
+					    <thead>
+					        <tr>
+					            <th>申请日期</th>
+					            <th>QQ</th>
+					            <th>电话号码</th>
+					            <th>代理经验</th>
+					            <th>审核进度</th>
+					            <th>审核日期</th>
+					            <th>是否通过</th>
+					            <th>拒绝理由</th>
+					        </tr>
+					    </thead>
+					    <tbody>
+                        					    </tbody>
+					</table>					
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="dialog_root"></div>
+
+</body></html>

@@ -1,0 +1,129 @@
+<!--侧边栏-->
+<div class="menu">
+    <h1 class="title">淘点通后台系统</h1>
+    <ul class="menu_main_list_area">
+    	
+        <li 
+        <?php
+            if ($Think.MODULE_NAME=='Index') {
+                echo 'class="mueu_main_list active"';
+            }
+            else{
+                echo 'class="mueu_main_list"';
+            }
+        ?>
+        >
+            <a class="mueu_main_title" href="{:U('Index/index')}">
+                <i class="icon icon_user"></i>
+                <span>个人信息</span>
+            </a>
+        </li>
+        
+        <li 
+            <?php
+            if ($Think.MODULE_NAME=='Notification') {
+                echo 'class="mueu_main_list active"';
+            }
+            else{
+                echo 'class="mueu_main_list"';
+            }
+        ?>
+        >
+            <a class="mueu_main_title" href="{:U('Notification/index')}">
+                <i class="icon icon_email"></i>
+                <span>消息通知</span>
+                            </a>
+        </li>
+
+        <li 
+        <?php
+            if ($Think.MODULE_NAME=='Sendtask') {
+                echo 'class="mueu_main_list active"';
+            }
+            else{
+                echo 'class="mueu_main_list"';
+            }
+        ?>
+        >
+            <a class="mueu_main_title" href="{:U('Sendtask/index')}">
+                <i class="icon icon_task"></i>
+                <span>发布任务</span>
+            </a>
+        </li>
+
+        <li 
+         <?php
+            if ($Think.MODULE_NAME=='Mytask') {
+                echo 'class="mueu_main_list active"';
+            }
+            else{
+                echo 'class="mueu_main_list"';
+            }
+        ?>
+        >
+            <a class="mueu_main_title" href="{:U('Mytask/index')}">
+                <i class="icon icon-signal"></i>
+                <span>我的任务</span>
+            </a>
+        </li>
+        
+        <li 
+    <?php
+            if ($Think.MODULE_NAME=='Gotask') {
+                echo 'class="mueu_main_list active"';
+            }
+            else{
+                echo 'class="mueu_main_list"';
+            }
+    ?>
+        >
+            <a class="mueu_main_title" href="{:U('Gotask/Index')}">
+                <i class="icon icon-prifit"></i>
+                <span>挂机赚分</span>
+            </a>
+        </li>
+        
+        <li
+    <?php
+            if ($Think.MODULE_NAME=='Pay') {
+                echo 'class="mueu_main_list active"';
+            }
+            else{
+                echo 'class="mueu_main_list"';
+            }
+    ?>
+        >
+            <a class="mueu_main_title" href="{:U('Pay/index')}">
+                <i class="icon icon-charge"></i>
+                <span style="color:#ff0000">积分充值</span>
+                <span class="new_message">New</span>
+            </a>
+        </li>
+        <!--
+        <li class="mueu_main_list">
+            <a class="mueu_main_title" href="./houtai-1.htm">
+                <i class="icon icon-trade"></i>
+                <span>积分转让</span>
+            </a>
+        </li>
+        -->
+        <li 
+    <?php
+            if ($Think.MODULE_NAME=='Daili') {
+                echo 'class="mueu_main_list active"';
+            }
+            else{
+                echo 'class="mueu_main_list"';
+            }
+    ?>
+        >
+            <a class="mueu_main_title" href="{:U('Daili/index')}">
+                <i class="icon icon-agent"></i>
+                <span style="color: #ff0000;">代理</span>
+                <span class="new_message">New</span>
+            </a>
+        </li>
+        
+                
+    </ul>
+</div>

@@ -1,0 +1,209 @@
+.clearFix:after { clear: both; display: block; visibility: hidden; height: 0; line-height: 0; content: "."; }
+.clearFix { zoom: 1; }/*解决IE6/7兼容问题*/
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: #2E363F;
+}
+.form{
+    width: 360px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #3f4954;
+    border-top: 1px solid #3f4954;
+    margin-top: 100px;
+}
+.form_title{
+    font-size: 20px;
+    width: 360px;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.form_input{
+    width: 240px;
+    padding: 10px 60px;
+    float: left;
+}
+.icon_area{
+    padding: 9px;
+    *padding: 8px 9px;
+    _padding: 8px 9px;
+    padding: 8px 9px\9;
+    display: inline-block;
+    float: left;
+}
+.bg_lg{
+    background: #28b779;
+}
+.form_input input{
+    height: 32px;
+    border: 0px;
+    display: inline-block;
+    width: 206px;
+    line-height: 26px;
+    padding: 4px 8px;
+    color: #555;
+    font-size: 14px;
+    vertical-align: middle;
+    float: left;
+    *height: 26px;
+    _height: 26px;
+    height: 26px\9;
+}
+.bg_ly{
+    background: #ffb848;
+}
+.icon_password{
+    background-position: -287px -22px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url("../images/icons.png");
+    background-repeat: no-repeat;
+}
+.code input{
+    width: 60px;
+}
+.code img{
+    float: left;
+    margin-left: 20px;
+    height: 34px;
+}
+.code a{
+    float: left;
+    font-size: 14px;
+    color: #ffffff;
+    margin-left: 20px;
+    display: block;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    vertical-align: text-top;
+    line-height: 20px;
+    margin-top: 14px;
+}
+.erro_area{
+    width: 220px;
+    margin: 5px 60px;
+    float: left;
+    color: #ff0000;
+    margin-bottom: 0;
+}
+.erro_area span{
+    font-size: 14px;
+}
+.btn{
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    padding: 4px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.register{
+    background-color: #5bb75b;
+    float: right;
+    border: 1px solid #5bb75b;
+}
+.other_btn{
+    width: 240px;
+    margin: 0 auto;
+    padding: 10px 60px;
+}
+.forget_password{
+    float: left;
+    margin-left: 60px;
+    font-size: 12px;
+    color: #a5a5a5;
+    text-decoration: underline;
+}
+.forget_password:hover{
+    color: #da542e;
+}
+.go_login{
+    float: left;
+    background-color: #49afcd;
+    border: 1px solid #49afcd;
+}
+.login{
+    background-color: #5bb75b;
+    float: right;
+    border: 1px solid #5bb75b;
+}
+.go_register{
+    float: left;
+    background-color: #49afcd;
+    border: 1px solid #49afcd;
+}
+.go_back{
+    float: left;
+    background-color: #49afcd;
+    border: 1px solid #49afcd;
+}
+.send_email{
+    background-color: #5bb75b;
+    float: right;
+    border: 1px solid #5bb75b;
+}
+.icon_email{
+    background-position: -72px 2px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url("../images/icons.png");
+    background-repeat: no-repeat;
+}
+.form_title p{
+    font-size: 14px;
+    width: 240px;
+    padding: 10px 60px;
+    line-height: 1.5;
+}
+.bg_lo{
+    background: #da542e;
+}
+.register_area{
+    display: none;
+}
+.forget_password_area{
+    display: none;
+}
+.erro_area{
+    display: none;
+}
+.form .register{
+    width: 240px;
+    float: left;
+    padding: 5px 0px;
+    background-color: #5bb75b;
+    border: 0;
+}
+.register_area .go_login{
+    float: right;
+}
+.form .login{
+    width: 240px;
+    float: left;
+    padding: 5px 0px;
+    background-color: #5bb75b;
+    border: 0;
+}
+.login_area .go_register{
+    float: right;
+}

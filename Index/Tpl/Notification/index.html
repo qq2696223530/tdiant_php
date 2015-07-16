@@ -1,0 +1,42 @@
+
+<html>
+<include file="Common:header"/>
+<body>
+
+<include file="Common:left_menu"/>
+<!--右侧整体内容-->
+<div class="content">
+    <!--用户信息栏-->
+    <include file="Common:user"/>
+    <div class="container">
+        <div class="container-fluid">
+            <!--系统消息-->
+            <div class="container_form">
+                <div class="container_form_title">
+                    <span class="icon"><i class="icon-email"></i></span>
+                    <h5>系统通知</h5>
+                </div>
+                <div class="container_form_content">
+                    <ul>
+                        <foreach name="data" item="v">
+                            <li class="clearFix setNoticeRead" id="setNoticeRead_5">
+                                                            <div class="system_icon"><img src="__PUBLIC__/images/message_normal.png"></div>
+                                <div class="system_message">
+                                    <p class="name">{$v.starttime} 系统通知：</p>
+                                    <p class="message_content">{$v.notificationname}</p>
+                                </div>
+                            </li>
+                            <br/>
+                        </foreach>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="table_footer">
+        </div>
+        
+    </div>
+</div>
+
+</body></html>

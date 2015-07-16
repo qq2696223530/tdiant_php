@@ -1,0 +1,218 @@
+
+<html>
+<include file="Common:header"/>
+<body>
+
+<include file="Common:left_menu"/>
+<!--右侧整体内容-->
+<div class="content">
+    <!--用户信息栏-->
+    <include file="Common:user"/>
+    <div class="container">
+        <div class="container-fluid">
+        
+            <!--账户详情-->
+            <div class="container_form">
+                <div class="container_form_title">
+                    <span class="icon"><i class="icon-th"></i></span>
+                    <h5>账户详情</h5>
+                    <input type="hidden" id="charge_succeed" value="">
+                </div>
+                
+                <div style="padding:10px; font-size: 13px;">你当前积分总额：<label style="font-size: 16px; color: #0066ff; font-weight: bold;">3892</label></div>
+                
+                <div class="container_form_content">
+                    <table>
+					    <thead>
+					        <tr>
+					            <th>积分总额</th>
+					            <th>冻结金额</th>
+					            <th>可用积分</th>
+					            <th>累计消费积分</th>
+					            <th>累计挂机赚分</th>
+					        </tr>
+					    </thead>
+					    <tbody>
+					        <tr> 
+					            <td>3892(赠送余额：0)</td>
+					            <td>0</td>
+					            <td>3892</td>
+					            <td>640</td>
+					            <td>4432</td>
+					        </tr>
+					    </tbody>
+					</table>
+                </div>
+                
+                <div class="container_form_content">
+	                <div class="table_description">说明：</div>
+	                <div class="table_description">1、当前运行的任务，系统每天凌晨会根据设定的每日最大PV以及单价，自动冻结当日需要消耗的积分</div>
+	                <div class="table_description">2、可用积分 = 积分总额 - 冻结金额 </div>
+	                <div class="table_description">3、积分总额 = 充值积分 + 挂机赚分 + 赠送余额 </div>
+	                <div class="table_description" style="margin-bottom:10px;">4、赠送余额可用来发布任务，但是不允许转让 </div>
+                </div>
+            </div>
+
+            <!--优惠券换积分-->
+            <div class="container_form">
+                <div class="container_form_title">
+                    <span class="icon"><i class="icon-question-sign"></i></span>
+                    <h5>优惠券换积分</h5>
+                </div>
+                <div class="container_form_content" style="padding:10px;">
+                    <div class="clearFix" style="padding:20px;">
+                        <a href="./houtai-6-1.htm" class="btn confirm"> 优惠券换积分  &gt;&gt; </a>
+                	</div>
+                    
+                </div>
+            </div>            
+            
+            <!--积分充值-->
+            <div class="container_form">
+                <div class="container_form_title">
+                    <span class="icon"><i class="icon-question-sign"></i></span>
+                    <h5>买套餐充值</h5>
+                </div>
+                <div class="container_form_content" style="padding:10px;">
+                	<div style="margin-left:20px; margin-top:4px; font-size: 14px; color: #41BEDD; ">请选择套餐，充的越多，赠送比例越高，越实惠！</div>
+                	
+                	                		                			<a href="javascript:void(0);"><div class="charge_button charge_button_normal" id="charge_button_1">20元套餐 (充积分:20,000 送积分:1,000)</div></a>
+                		                                    		                			<a href="javascript:void(0);"><div class="charge_button charge_button_normal charge_button_selected" id="charge_button_2">100元套餐 (充积分:100,000 送积分:10,000)</div></a>
+                		                                    		                			<a href="javascript:void(0);"><div class="charge_button charge_button_normal" id="charge_button_3">300元套餐 (充积分:300,000 送积分:45,000)</div></a>
+                		                                    		                			<a href="javascript:void(0);"><div class="charge_button charge_button_normal" id="charge_button_4">1000元套餐 (充积分:1,000,000 送积分:350,000)</div></a>
+                		                                    		                			<a href="javascript:void(0);"><div class="charge_button charge_button_normal" id="charge_button_5">2000元套餐 (充积分:2,000,000 送积分:900,000)</div></a>
+                		                                    		                			<a href="javascript:void(0);"><div class="charge_button charge_button_normal" id="charge_button_6">5000元套餐 (充积分:5,000,000 送积分:3,500,000)</div></a>
+                		                                    		                			<a href="javascript:void(0);"><div class="charge_button charge_button_normal" id="charge_button_7">10000元套餐 (充积分:10,000,000 送积分:10,000,000)</div></a>
+                		                                        
+                    <div class="actions clearFix">
+                        <a id="charge_post_button" href="javascript:void(0);" class="btn confirm"> 去支付  &gt;&gt; </a>
+                	</div>
+                    
+                </div>
+            </div>
+            
+            
+            <!-- 充值记录 -->
+            <div class="container_form">
+                <div class="container_form_title">
+                    <span class="icon"><i class="icon-th"></i></span>
+                    <h5>充值记录</h5>
+                </div>
+                
+                <div class="container_form_content">
+                    <table>
+					    <thead>
+					        <tr>
+					            <th>订单号</th>
+					            <th>套餐名称</th>
+					            <th>套餐说明</th>
+					            <th>提交日期</th>
+					            <th>到账日期</th>
+					            <th>充值金额</th>
+					            <th>充值积分</th>
+					            <th>赠送积分</th>
+					            <th>状态</th>
+					            <th>操作</th>
+					        </tr>
+					    </thead>
+					    <tbody>
+					    					        <tr> 
+					            <td>CZ201505230001170</td>
+					            <td>G套餐</td>
+					            <td>10000元套餐 (充积分:10,000,000 送积分:10,000,000)</td>
+					            <td>2015-05-23 18:58:10</td>
+					            <td></td>
+					            <td>10000.00</td>
+					            <td>10000000</td>
+					            <td>10000000</td>
+					            
+					        					            <td>未支付</td>
+					            <td>
+					            	<div style="margin-top:5px; margin-bottom:5px;">
+                        				<a href="##########################" class="btn confirm"> 去支付  &gt;&gt; </a>
+                					</div>
+					            </td>
+					        					        </tr>
+					    					        <tr> 
+					            <td>CZ201505230001171</td>
+					            <td>B套餐</td>
+					            <td>100元套餐 (充积分:100,000 送积分:10,000)</td>
+					            <td>2015-05-23 18:58:18</td>
+					            <td></td>
+					            <td>100.00</td>
+					            <td>100000</td>
+					            <td>10000</td>
+					            
+					        					            <td>未支付</td>
+					            <td>
+					            	<div style="margin-top:5px; margin-bottom:5px;">
+                        				<a href="##########################" class="btn confirm"> 去支付  &gt;&gt; </a>
+                					</div>
+					            </td>
+					        					        </tr>
+					    					        <tr> 
+					            <td>CZ201505230001172</td>
+					            <td>B套餐</td>
+					            <td>100元套餐 (充积分:100,000 送积分:10,000)</td>
+					            <td>2015-05-23 18:58:34</td>
+					            <td></td>
+					            <td>100.00</td>
+					            <td>100000</td>
+					            <td>10000</td>
+					            
+					        					            <td>未支付</td>
+					            <td>
+					            	<div style="margin-top:5px; margin-bottom:5px;">
+                        				<a href="##########################" class="btn confirm"> 去支付  &gt;&gt; </a>
+                					</div>
+					            </td>
+					        					        </tr>
+					    					        <tr> 
+					            <td>CZ201506100001741</td>
+					            <td>G套餐</td>
+					            <td>10000元套餐 (充积分:10,000,000 送积分:10,000,000)</td>
+					            <td>2015-06-10 00:53:37</td>
+					            <td></td>
+					            <td>10000.00</td>
+					            <td>10000000</td>
+					            <td>10000000</td>
+					            
+					        					            <td>未支付</td>
+					            <td>
+					            	<div style="margin-top:5px; margin-bottom:5px;">
+                        				<a href="##########################" class="btn confirm"> 去支付  &gt;&gt; </a>
+                					</div>
+					            </td>
+					        					        </tr>
+					    					        <tr> 
+					            <td>CZ201506100001756</td>
+					            <td>C套餐</td>
+					            <td>300元套餐 (充积分:300,000 送积分:45,000)</td>
+					            <td>2015-06-10 14:59:19</td>
+					            <td></td>
+					            <td>300.00</td>
+					            <td>300000</td>
+					            <td>45000</td>
+					            
+					        					            <td>未支付</td>
+					            <td>
+					            	<div style="margin-top:5px; margin-bottom:5px;">
+                        				<a href="##########################" class="btn confirm"> 去支付  &gt;&gt; </a>
+                					</div>
+					            </td>
+					        					        </tr>
+					    					    </tbody>
+					</table>
+					
+					<div class="table_footer">
+																													</div>
+					
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div id="dialog_root"></div>
+
+</body></html>

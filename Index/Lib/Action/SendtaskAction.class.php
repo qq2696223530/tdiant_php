@@ -1,0 +1,263 @@
+<?php
+/**
+ * 发布任务
+ */
+class SendtaskAction extends Action{
+	public function index(){
+		$this->display();
+	}
+
+
+
+
+	/**
+	 * 发布任务
+	 * @return [type] [description]
+	 * 发布任务要在这个礼拜五完成结束
+	 */
+	public function sendtask(){
+
+		//新商品入库
+		$good_data["goodname"]=$_REQUEST["good_title"];
+		$good_re=M("goods")->add($good_data);
+
+
+		//价格范围
+		$price_data["startprice"]=$_REQUEST["task_from_price"];
+		$price_data["endprice"]=$_REQUEST["task_to_price"];
+		$price_re=M("pricesection")->add($price_data);
+
+		//页面范围
+		$page_data["startpage"]=$_REQUEST["task_from_page"];
+		$page_data["endpage"]=$_REQUEST["task_to_page"];
+		$page_Re=M("pagesection")->add($page_data);
+
+		//商品入库成功
+		if ($good_re) {
+			//任务单入库
+			$task_data["accountid"]=$_SESSION["userid"];
+			$task_data["taskname"]=$_REQUEST["task_name"];
+			$task_data["taskkeywords"]=$_REQUEST["task1_keyword"];
+			$task_data["taskurl"]=$_REQUEST["task_good_url"];
+			$task_data["goodsid"]=$good_re;
+			$task_data["stoptime"]=$_REQUEST["task_to_date"];
+			$task_data["starttime"]=$_REQUEST["task_from_date"];
+			$task_data["pro"]=$_REQUEST["priority"];
+
+			//入库操作
+			$task_re=M("task")->add($task_data);
+			if ($task_re) {
+				//分布时间段
+				$time1=array(
+						"tasktime"=>'0',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour0"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'1',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour1"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'2',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour2"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'3',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour3"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'4',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour4"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'5',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour5"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'6',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour6"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'7',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour7"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'8',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour8"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'9',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour9"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'10',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour10"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'11',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour11"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'12',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour12"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'13',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour13"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'14',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour14"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'14',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour14"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'15',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour15"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'16',
+						'taskid'=>$task_re,
+						"num"=>$_REQUEST["maxPvHour16"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'17',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour17"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'18',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour18"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'19',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour19"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'20',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour20"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'21',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour21"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'22',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour22"]
+					);
+				M("tasktime")->add($time1);
+				$time1=array(
+						"tasktime"=>'23',
+						'taskid'=>$task_re,
+						'pageid'=>$page_Re,
+						'priceid'=>$price_re,
+						"num"=>$_REQUEST["maxPvHour23"]
+					);
+				$re=M("tasktime")->add($time1);
+
+				if ($re) {
+					$this->success('入库成功,发布任务成功');
+				}
+				else{
+					$this->error("发布任务失败");
+				}
+			}
+		}
+		else{
+			$this->error('商品入库失败');
+		}
+	}
+}
+?>

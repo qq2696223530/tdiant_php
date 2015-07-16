@@ -1,0 +1,60 @@
+
+<html><head lang="zh"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>淘点通系统</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/dialog.css">
+    <script type="text/javascript" src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/dialog.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/menu.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/task_manage.js"></script>
+</head>
+<body>
+
+<!--侧边栏-->
+<include file="Common:left_menu"/>
+<!--右侧整体内容-->
+<div class="content">
+    <!--用户信息栏-->
+    <include file="Common:user"/>
+    <div class="container">
+        <div class="container-fluid">
+            <!--我的任务-->
+            <div class="container_form">
+                <div class="container_form_title">
+                    <span class="icon"><i class="icon-th"></i></span>
+                    <h5>挂机成绩</h5>
+                </div>
+                
+                <div class="container_form_content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>手机品牌</th>
+                                <th>手机IMEI</th>
+                                <th>成功次数</th>
+                                <th>失败次数</th>
+                                <th>赚取积分总额</th>
+                                <th>首次挂机时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                                    <tr> 
+                                <td>HTC_D816W</td>
+                                <td>352246063337425</td>
+                                <td>333</td>
+                                <td>35</td>
+                                <td>4643</td>
+                                <td>2015-06-08</td>
+                            </tr>
+                                                </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div id="dialog_root"></div>
+
+</body></html>

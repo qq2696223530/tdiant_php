@@ -1,0 +1,155 @@
+<html>
+<include file="Common:header"/>
+<body>
+
+<include file="Common:left_menu"/>
+<!--右侧整体内容-->
+<div class="content">
+    
+    <include file="Common:user"/>
+
+    <div class="container">
+        <div class="container-fluid">
+            <!--修改头像-->
+            <div class="container_form">
+                <div class="container_form_title">
+                    <span class="icon"><i class="icon-user"></i></span>
+                    <h5>修改头像</h5>
+                </div>
+                <div class="container_form_content">
+                    <div class="control-group clearFix">
+                        <div class="upload_img">
+                            <embed src="__PUBLIC__/images/avatar.swf" quality="high" id="avatar_flash" name="avatar_flash" align="middle" width="256" height="256" play="true" loop="false" menu="false" allowscriptaccess="sameDomain" swliveconnect="true" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+                            
+							<input type="hidden" id="upserver" name="upserver" value="http://www.shoujiliang.com/index.php?c=setting&amp;a=uploadAvatar">
+							<input type="hidden" id="devkey" name="devkey" value="990f0ec74e9a4cb21269780b88bc184c">
+                        </div>
+                        <div class="img_view">
+                            <p>你上传的头像会自动生成三种尺寸，请注意中小尺寸的头像是否清晰</p>
+                            <div class="img_view_area">
+                                <img class="img_big" id="avatar_big" src="__PUBLIC__/images/big.jpg">
+                                <img class="img_normal" id="avatar_normal" src="__PUBLIC__/images/normal.jpg">
+                                <img class="img_small" id="avatar_small" src="__PUBLIC__/images/small.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group actions clearFix">
+                        <a id="save_avatar_btn" href="javascript:void(0);" class="btn confirm">保存</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!--基本信息-->
+            <div class="container_form">
+                <div class="container_form_title">
+                    <span class="icon"><i class="icon-question-sign"></i></span>
+                    <h5>基本信息</h5>
+                </div>
+                <div class="container_form_content">
+                    <div class="control-group settings_email clearFix">
+                        <label class="control-label">邮箱</label>
+                        <div class="controls">
+                            <span>{$data.email}</span>
+                        </div>
+                    </div>
+                    <div class="control-group settings_nickname clearFix">
+                        <label class="control-label">昵称</label>
+                        <form id="upnicknameform" action="{:U('Index/upnickname')}" method="post">
+                            <div class="controls">
+                                <input type="hidden" value="{$data.accountid}" name="userid"/>
+                                <span id="nickname_text">{$data.nickname}</span>
+                                <input type="text" id="nickname" name="nickname" class="container_forms" value="{$data.nickname}" style="display:none;">
+                                <a class="btn settings" id="mod_nickname" href="javascript:void(0);">修改</a>
+                                <a class="btn confirm" id="save_nickname" style="display:none;">保存</a>
+                            </div>
+                        </form>
+                        <script type="text/javascript">
+                            $(function(){
+                                $("#save_nickname").click(function(){
+                                    $("#upnicknameform").submit();
+                                });
+                            });
+                        </script>
+                    </div>
+                    <div class="control-group settings_realname clearFix" style="display:none;">
+                        <label class="control-label">真实姓名</label>
+                        <form >
+                            <div class="controls">
+                                <span>未设置</span>
+                                <input type="text" name="required" class="container_forms" style="display:none;">
+                                <a class="btn settings" href="javascript:void(0);">修改</a>
+                                <a class="btn confirm" style="display:none;">保存</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="control-group settings_sex clearFix" style="display:none;">
+                        <label class="control-label">性别</label>
+                        <div class="controls">
+                        									<span>未设置</span>
+														
+                            <span style="display:none;">
+                                <label class="sex_label">
+                                            	<input class="choose_sex" type="radio" value="male" name="sex">
+                                     
+                                    <span>男</span>
+                                </label>
+                                <label class="sex_label">
+                                                                	<input class="choose_sex" type="radio" value="female" name="sex">
+                                                                    <span>女</span>
+                                </label>
+                            </span>
+                            <a class="btn settings" href="javascript:void(0);">修改</a>
+                            <a class="btn confirm" href="javascript:void(0);" style="display:none;">保存</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--修改密码-->
+            <form action="{:U('Index/uppassword')}" method="post" id="uppassword">
+                <input name="userid" value="{$data.accountid}" type="hidden"/>
+                <div class="container_form">
+                    <div class="container_form_title">
+                        <span class="icon"><i class="icon-question-sign"></i></span>
+                        <h5>修改密码</h5>
+                    </div>
+                    <div class="container_form_content">
+                        <div class="control-group settings_old clearFix">
+                            <label class="control-label">旧密码</label>
+                            <div class="controls">
+                                <input type="password" name="old_password" id="old_password" class="container_forms">
+                            </div>
+                        </div>
+                        <div class="control-group settings_new clearFix">
+                            <label class="control-label">新密码</label>
+                            <div class="controls">
+                                <input type="password" name="new_password" id="new_password" class="container_forms">
+                            </div>
+                        </div>
+                        <div class="control-group settings_code clearFix" style="display:none;">
+                            <label class="control-label">验证码</label>
+                            <div class="controls">
+                                <input type="text" name="mod_password_vcode" id="mod_password_vcode" class="container_forms" maxlength="4">
+                                <img id="mod_password_vcode_image" src="./houtai-1_files/index.php">
+                                <a id="refresh_mod_password_vcode_image" class="refresh" href="javascript:void(0);">刷新</a>
+                            </div>
+                        </div>
+                        <div class="actions clearFix">
+                            <a id="mod_password_post_button" class="btn uppwd confirm">修改</a>
+                        </div>
+                        <script type="text/javascript">
+                            $(function(){
+                                $(".uppwd").click(function(){
+                                    $("#uppassword").submit();
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="dialog_root"></div>
+
+</body></html>
