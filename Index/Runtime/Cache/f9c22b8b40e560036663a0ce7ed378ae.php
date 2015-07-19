@@ -1,8 +1,7 @@
-<?php if (!defined('THINK_PATH')) exit();?>
-<html>
+<?php if (!defined('THINK_PATH')) exit();?><html>
 <head lang="zh"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <title>淘点通系统</title>
+    <title>淘点通系统 - tdiant.com </title>
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css">
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/dialog.css">
     <script type="text/javascript" src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
@@ -10,6 +9,7 @@
     <script type="text/javascript" src="__PUBLIC__/js/menu.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/user_setting.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/mod_password.js"></script>
+    <link rel="shortcut icon" href="http://www.tdiant.com/ico.ico">
 </head>
 <body>
 
@@ -106,15 +106,16 @@
     <!--用户信息栏-->
     <div class="header">
     <ul>
-        <li><img id="avatar_small_head" src="__PUBLIC__/images/small.jpg"><span>1127732832@qq.com</span></li>
-        <li><span>会员等级：VIP1</span></li>
+        <li><img id="avatar_small_head" src="__PUBLIC__/images/small.jpg"><span><?php echo (session('username')); ?></span></li>
+        <li><span>会员等级：试用会员(剩余3天)</span></li>
         <li><span>账户积分：3892(冻结：0)</span></li>
-        <li><span class="charge"><a style="color:#ff0000" href="./houtai-6.htm"><i class="icon-charge"></i>快速充值</a></span></li>
-        <li><a style="color:#ff0000" href="http://www.shoujiliang.com/faq2.doc"><i class="icon_question"></i>常见问题</a></li>
+        <li><span class="charge"><a style="color:#ff0000" href="<?php echo U('Pay/index');?>"><i class="icon-charge"></i>快速充值</a></span></li>
+        <li><a style="color:#ff0000" href="http://www.tdiant.com/index/wenti.htm" target="_blank"><i class="icon_question"></i>常见问题</a></li>
+        <li><a href="http://www.tdiant.com/index.htm" target="_blank"><i class="icon icon-logout"></i>首页</a></li>
         <li><a href="<?php echo U('User/index');?>" id="menu_logout"><i class="icon icon-logout"></i>退出</a></li>
     </ul>
-    <p>官方群：<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=e40674bc9d6805d14100d91ac1cb39cb558c683b6535467c07ed048e5b2ebe5b"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="淘点通官方群" title="淘点通官方群"></a>
-</p>
+    <p>官方群：<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=e40674bc9d6805d14100d91ac1cb39cb558c683b6535467c07ed048e5b2ebe5b"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="淘点通官方群" title="淘点通官方群"></a></p>
+    <p>咨询：<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1127732832&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1127732832:51" alt="点击咨询" title="点击咨询"/></a></p>
 </div>
 
     <div class="container">
@@ -128,7 +129,7 @@
                 <div class="container_form_content">
                     <div class="control-group clearFix">
                         <div class="upload_img">
-                            <embed src="images/avatar.swf" quality="high" id="avatar_flash" name="avatar_flash" align="middle" width="256" height="256" play="true" loop="false" menu="false" allowscriptaccess="sameDomain" swliveconnect="true" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+                            <embed src="__PUBLIC__/images/avatar.swf" quality="high" id="avatar_flash" name="avatar_flash" align="middle" width="256" height="256" play="true" loop="false" menu="false" allowscriptaccess="sameDomain" swliveconnect="true" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
                             
 							<input type="hidden" id="upserver" name="upserver" value="http://www.shoujiliang.com/index.php?c=setting&amp;a=uploadAvatar">
 							<input type="hidden" id="devkey" name="devkey" value="990f0ec74e9a4cb21269780b88bc184c">
