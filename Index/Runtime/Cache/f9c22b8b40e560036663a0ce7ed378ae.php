@@ -108,7 +108,7 @@
     <ul>
         <li><img id="avatar_small_head" src="__PUBLIC__/images/small.jpg"><span><?php echo (session('username')); ?></span></li>
         <li><span>会员等级：试用会员(剩余3天)</span></li>
-        <li><span>账户积分：3892(冻结：0)</span></li>
+        <li><span>账户积分：0(冻结：0)</span></li>
         <li><span class="charge"><a style="color:#ff0000" href="<?php echo U('Pay/index');?>"><i class="icon-charge"></i>快速充值</a></span></li>
         <li><a style="color:#ff0000" href="http://www.tdiant.com/index/wenti.htm" target="_blank"><i class="icon_question"></i>常见问题</a></li>
         <li><a href="http://www.tdiant.com/index.htm" target="_blank"><i class="icon icon-logout"></i>首页</a></li>
