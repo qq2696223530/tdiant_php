@@ -68,8 +68,17 @@ class UserAction extends Action{
 		$db=M("account");
 		$data['email']=$register_email;
 		$data['password']=md5($register_email);
+		//先去找这个人有没有
+		$tmp=$db->where(array("email"=>$register_email))->find();
+		if (!empty($tmp)) {
+			$this->error('此账号已被注册');
+			return;
+		}
 
 		$re=$db->add($data);
+
+		// p($re);
+		// die();
 		if ($re) {
 			$this->success('注册成功');
 		}
