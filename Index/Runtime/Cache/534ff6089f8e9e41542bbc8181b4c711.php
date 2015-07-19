@@ -108,7 +108,7 @@
     <div class="header">
     <ul>
         <li><img id="avatar_small_head" src="__PUBLIC__/images/small.jpg"><span><?php echo (session('username')); ?></span></li>
-        <li><span>会员等级：试用会员(剩余3天)</span></li>
+        <li><span>会员等级：试用会员(剩余0天)</span></li>
         <li><span>账户积分：0(冻结：0)</span></li>
         <li><span class="charge"><a style="color:#ff0000" href="<?php echo U('Pay/index');?>"><i class="icon-charge"></i>快速充值</a></span></li>
         <li><a style="color:#ff0000" href="http://www.tdiant.com/index/wenti.htm" target="_blank"><i class="icon_question"></i>常见问题</a></li>
@@ -129,7 +129,7 @@
                     <input type="hidden" id="charge_succeed" value="">
                 </div>
                 
-                <div style="padding:10px; font-size: 13px;">你当前积分总额：<label style="font-size: 16px; color: #0066ff; font-weight: bold;">3892</label></div>
+                <div style="padding:10px; font-size: 13px;">你当前积分总额：<label style="font-size: 16px; color: #0066ff; font-weight: bold;">0</label></div>
                 
                 <div class="container_form_content">
                     <table>
@@ -144,11 +144,11 @@
 					    </thead>
 					    <tbody>
 					        <tr> 
-					            <td>3892(赠送余额：0)</td>
+					            <td>0(赠送余额：0)</td>
 					            <td>0</td>
-					            <td>3892</td>
-					            <td>640</td>
-					            <td>4432</td>
+					            <td>0</td>
+					            <td>0</td>
+					            <td>0</td>
 					        </tr>
 					    </tbody>
 					</table>
