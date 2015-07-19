@@ -12,33 +12,35 @@
 <body>
 	<!--注册-->
 	<div class="register_area" style="display: none;">
-	    <div class="form form_register clearFix">
-	        <div class="form_title">用户注册</div>
-	        <div class="form_input">
-	            <span class="icon_area bg_lg"><i class="icon_email"></i></span>
-	            <input type="text" name="register_email" id="register_email" placeholder="请输入邮箱">
-	        </div>
-	        <div class="form_input">
-	            <span class="icon_area bg_ly"><i class="icon_password"></i></span>
-	            <input type="password" name="register_password1" id="register_password1" placeholder="请输入密码">
-	        </div>
-	        <div class="form_input">
-	            <span class="icon_area bg_ly"><i class="icon_password"></i></span>
-	            <input type="password" name="register_password2" id="register_password2" placeholder="请重复输入密码">
-	        </div>
-	        
-	        <div class="form_input code">
-	            <input type="text" name="register_vcode" id="register_vcode" placeholder="验证码" maxlength="4">
-	            <img id="register_vcode_image" src="./denglu/index.php">
-	            <a id="refresh_register_vcode_image" href="javascript:void(0);">刷新</a>
-	        </div>
-	        
-	        <div class="erro_area"><span class="erro" id="register_error">用户名不正确</span></div>
-	        <div class="form_input"><a class="btn register" id="register_post_button" href="javascript:void(0);">确认注册</a></div>
-	    </div>
-	    <div class="other_btn clearFix">
-	        <a href="javascript:void(0);" class="btn go_login">我要登录</a>
-	    </div>
+		<form id="register_form" action="{:U('User/register')}" method="post">
+		    <div class="form form_register clearFix">
+		        <div class="form_title">用户注册</div>
+		        <div class="form_input">
+		            <span class="icon_area bg_lg"><i class="icon_email"></i></span>
+		            <input type="text" name="register_email" id="register_email" placeholder="请输入邮箱">
+		        </div>
+		        <div class="form_input">
+		            <span class="icon_area bg_ly"><i class="icon_password"></i></span>
+		            <input type="password" name="register_password1" id="register_password1" placeholder="请输入密码">
+		        </div>
+		        <div class="form_input">
+		            <span class="icon_area bg_ly"><i class="icon_password"></i></span>
+		            <input type="password" name="register_password2" id="register_password2" placeholder="请重复输入密码">
+		        </div>
+		        
+		        <div class="form_input code">
+		            <!-- <input type="text" name="register_vcode" id="register_vcode" placeholder="验证码" maxlength="4"> -->
+		            <!-- <img id="register_vcode_image" src="{:U('Base/verify')}"> -->
+		            <!-- <a id="refresh_register_vcode_image" href="javascript:void(0);">刷新</a> -->
+		        </div>
+		        
+		        <div class="erro_area"><span class="erro" id="register_error">用户名不正确</span></div>
+		        <div class="form_input"><input class="btn register" id="register_post_button" href="javascript:void(0);"  type="button" value="确认注册"/></div>
+		    </div>
+		    <div class="other_btn clearFix">
+		        <a href="javascript:void(0);" class="btn go_login">我要登录</a>
+		    </div>
+	    </form>
 	</div>
 	
 	<!--登录-->
@@ -89,7 +91,7 @@
 	        
 	        <div class="form_input code">
 	            <input name="get_password_vcode" id="get_password_vcode" type="text" placeholder="验证码" maxlength="4">
-	            <img id="get_password_vcode_image" src="./denglu/index(1).php">
+	            <img id="get_password_vcode_image" src="{:U('Base/verify')}">
 	            <a id="refresh_get_password_vcode_image" href="javascript:void(0);">刷新</a>
 	        </div>
 	        

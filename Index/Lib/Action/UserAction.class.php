@@ -50,5 +50,33 @@ class UserAction extends Action{
 		
 		$this->display("User/index");
 	}
+
+	/**
+	 * 用户注册
+	 * @return [type] [description]
+	 */
+	public function register(){
+		$register_password1=$_REQUEST['register_password1'];
+		$register_password2=$_REQUEST['register_password2'];
+		$register_email=$_REQUEST['register_email'];
+
+		if ($register_password1!=$register_password2) {
+			$this->error('重复密码输入错误......');
+		}
+
+
+		$db=M("account");
+		$data['email']=$register_email;
+		$data['password']=md5($register_email);
+
+		$re=$db->add($data);
+		if ($re) {
+			$this->success('注册成功');
+		}
+		else{
+			$this->error("注册失败");
+		}
+		
+	}
 }
 ?>

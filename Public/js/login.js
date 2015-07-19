@@ -99,19 +99,20 @@ $(document).ready(function () {
 			return;
 		}
 		
-		if($vcode=="") {
-			showRegisterError("验证码不能为空");
-			return;
-		}
-		
-		$.post("http://www.shoujiliang.com/js/index.php?c=home&a=register", { email:$email, pass1:$pass1, pass2:$pass2, 
-			vcode:$vcode, 
-			ajax:"true"}, onRegister );
+		// if($vcode=="") {
+		// 	showRegisterError("验证码不能为空");
+		// 	return;
+		// }
+		$("#register_form").submit();
+
+		// $.post("http://www.tdiant.com/index.php?m=User&a=register", { email:$email, pass1:$pass1, pass2:$pass2,
+		// 	ajax:"true"}, onRegister );
     });
     
     
 	function onRegister( $result ) 
 	{
+		alert($result);
 		var json;
 		eval("json="+$result+";");
 		
@@ -127,7 +128,7 @@ $(document).ready(function () {
 	
 	function gotoConsole() 
 	{
-		location.href ="http://www.shoujiliang.com/js/index.php?c=task&a=showTaskCreate";
+		location.href ="http://www..com/js/index.php?c=task&a=showTaskCreate";
     }
     
     function hideRegisterError() 
@@ -184,7 +185,7 @@ $(document).ready(function () {
 		}
 		*/
 		
-		$.post("http://www.shoujiliang.com/js/index.php?c=home&a=login", { email:$email, pwd:$pwd, /*vcode:$vcode, */ajax:"true"}, onLogin );
+		$.post("http://www.tdiant.com/js/index.php?c=home&a=login", { email:$email, pwd:$pwd, /*vcode:$vcode, */ajax:"true"}, onLogin );
     });
     
 	function onLogin( $result ) {
@@ -234,7 +235,7 @@ $(document).ready(function () {
 			return;
 		}
 		
-		$.post("http://www.shoujiliang.com/js/index.php?c=home&a=resetPwd", { email:$email, vcode:$vcode, ajax:"true"}, onGetPwd );
+		$.post("http://www.tdiant.com/js/index.php?c=home&a=resetPwd", { email:$email, vcode:$vcode, ajax:"true"}, onGetPwd );
     });
     
 	function onGetPwd( $result ) 
