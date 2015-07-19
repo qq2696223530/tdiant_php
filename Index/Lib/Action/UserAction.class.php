@@ -19,8 +19,6 @@ class UserAction extends Action{
 		$email=$_REQUEST["login_email"];
 		$password=md5($_REQUEST["login_password"]);
 
-		echo $email.$password."<br/>";
-		die();
 
 		//得出邮件和密码进行验证
 		$db=M("account");
