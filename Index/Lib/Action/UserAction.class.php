@@ -77,6 +77,7 @@ class UserAction extends Action{
 			$this->error("注册失败");
 		}
 		
+		//注册功能
 	}
 }
 ?>
