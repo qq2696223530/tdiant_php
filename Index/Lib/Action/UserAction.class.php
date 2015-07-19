@@ -19,6 +19,9 @@ class UserAction extends Action{
 		$email=$_REQUEST["login_email"];
 		$password=md5($_REQUEST["login_password"]);
 
+		echo $email.$password."<br/>";
+		die();
+
 		//得出邮件和密码进行验证
 		$db=M("account");
 		$where=array("email"=>$email);
@@ -67,7 +70,7 @@ class UserAction extends Action{
 
 		$db=M("account");
 		$data['email']=$register_email;
-		$data['password']=md5($register_email);
+		$data['password']=md5($register_password1);
 		//先去找这个人有没有
 		$tmp=$db->where(array("email"=>$register_email))->find();
 		if (!empty($tmp)) {
