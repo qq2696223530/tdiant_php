@@ -75,8 +75,8 @@
         >
             <a class="mueu_main_title" href="<?php echo U('Pay/index');?>">
                 <i class="icon icon-charge"></i>
-                <span style="color:#ff0000">积分充值</span>
-                <span class="new_message">New</span>
+                <!-- <span style="color:#ff0000">积分充值</span> -->
+                <!-- <span class="new_message">New</span> -->
             </a>
         </li>
         <!--
@@ -93,8 +93,8 @@
         >
             <a class="mueu_main_title" href="<?php echo U('Daili/index');?>">
                 <i class="icon icon-agent"></i>
-                <span style="color: #ff0000;">代理</span>
-                <span class="new_message">New</span>
+                <!-- <span style="color: #ff0000;">代理</span> -->
+                <!-- <span class="new_message">New</span> -->
             </a>
         </li>
         
