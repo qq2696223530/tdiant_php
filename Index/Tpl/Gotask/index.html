@@ -32,22 +32,22 @@
                             <tr>
                                 <th>手机品牌</th>
                                 <th>手机IMEI</th>
-                                <th>成功次数</th>
-                                <th>失败次数</th>
-                                <th>赚取积分总额</th>
-                                <th>首次挂机时间</th>
+                                <th>任务次数</th>
+                                <th>任务ID</th>
+                                <th>完成时间</th>
                             </tr>
                         </thead>
-                        <tbody>
-                                                    <tr> 
-                                <td>HTC_D816W</td>
-                                <td>352246063337425</td>
-                                <td>333</td>
-                                <td>35</td>
-                                <td>4643</td>
-                                <td>2015-06-08</td>
-                            </tr>
-                                                </tbody>
+                        <foreach name="data" item="v">
+                            <tbody>
+                                <tr> 
+                                    <td>HTC_D816W</td>
+                                    <td>352246063337425</td>
+                                    <td>{$v.num}</td>
+                                    <td>{$v.oktaskid}</td>
+                                    <td>{$v.time}</td>
+                                </tr>
+                            </tbody>
+                        </foreach>
                     </table>
                 </div>
                 

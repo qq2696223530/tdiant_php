@@ -1,13 +1,16 @@
 <?php if (!defined('THINK_PATH')) exit();?>
-<html><head lang="zh"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head lang="zh"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <title>淘点通系统</title>
+    <title>淘点通系统 - tdiant.com </title>
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css">
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/dialog.css">
     <script type="text/javascript" src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/dialog.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/menu.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/js/task_manage.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/user_setting.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/mod_password.js"></script>
+    <link rel="shortcut icon" href="http://www.tdiant.com/ico.ico">
 </head>
 <body>
 
@@ -122,32 +125,86 @@
             <div class="container_form">
                 <div class="container_form_title">
                     <span class="icon"><i class="icon-th"></i></span>
-                    <h5>挂机成绩</h5>
+                    <h5>我的任务</h5>
                 </div>
-                
+                <div class="table_control clearFix">
+                    <a href="<?php echo U('Sendtask/index');?>" class="btn settings">新建任务</a>
+                    
+                    
+                    <!-- 
+                    <a href="javascript:void(0);" class="btn confirm">全部暂停</a>
+                    <div class="table_control_options">
+                        <input class="choose_status" type="radio" value="all" checked="checked" name="status"/>
+                        <label class="sex_label"/>全部</label>
+                        <input class="choose_status" type="radio" value="stop" name="status"/>
+                        <label class="sex_label"/>未启动</label>
+                        <input class="choose_status" type="radio" value="doing" name="status"/>
+                        <label class="sex_label"/>运行中</label>
+                        <input class="choose_status" type="radio" value="pause" name="status"/>
+                        <label class="sex_label"/>已暂停</label>
+                        <input class="choose_status" type="radio" value="done" name="status"/>
+                        <label class="sex_label"/>已完成</label>
+                    </div>
+                     -->
+                     
+                </div>
                 <div class="container_form_content">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>手机品牌</th>
-                                <th>手机IMEI</th>
-                                <th>任务次数</th>
-                                <th>任务ID</th>
-                                <th>完成时间</th>
-                            </tr>
-                        </thead>
-                        <?php if(is_array($data)): foreach($data as $key=>$v): ?><tbody>
-                                <tr> 
-                                    <td>HTC_D816W</td>
-                                    <td>352246063337425</td>
-                                    <td><?php echo ($v["num"]); ?></td>
-                                    <td><?php echo ($v["oktaskid"]); ?></td>
-                                    <td><?php echo ($v["time"]); ?></td>
-                                </tr>
-                            </tbody><?php endforeach; endif; ?>
-                    </table>
-                </div>
+                	<table>
+    <thead>
+        <tr>
+            <th>任务ID</th>
+            <th>任务名称</th>
+            <th>有效时间</th>
+            <th>预设IP/日</th>
+            
+            <th>今日成功</th>
+            <th>今日失败</th>
+            <th>昨日成功</th>
+            <th>昨日失败</th>
+            
+            <th>总成功</th>
+            <th>总失败</th>
+            <th>消耗积分</th>
+            
+            <th>状态</th>
+            <th>任务控制</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php if(is_array($data)): foreach($data as $key=>$v): ?><tr> 
+                <td><?php echo ($v["taskid"]); ?></td>
+                <td><?php echo ($v["taskname"]); ?></td>
+                <td><?php echo ($v["starttime"]); ?> 到 <?php echo ($v["stoptime"]); ?></td>
+                <td>50</td>
                 
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td id="task_status_25416">
+                            	已就绪
+                    
+                            	<br><label style="color:#f00;">(未通过客户端测试)</label>
+                	<input type="hidden" class="task_not_passed_test" id="task_not_passed_test_25416" name="task_not_passed_test_25416" value="1">
+                            
+                            
+    			</td>
+                <td>
+                		<a href="javascript:void(0);" class="start_task" id="start_task_25416">启动</a>
+                		<a href="./houtai-4-2.htm">修改</a>
+                        <a href="javascript:void(0);" class="delete_task" id="delete_task_25416">删除</a>
+                </td>
+            </tr><?php endforeach; endif; ?>
+         
+            </tbody>
+</table>
+<div class="table_footer">
+				</div>				</div>
             </div>
         </div>
     </div>

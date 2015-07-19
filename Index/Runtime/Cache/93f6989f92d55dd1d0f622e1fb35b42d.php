@@ -90,11 +90,11 @@
     <?php
  if ($Think.MODULE_NAME=='Pay') { echo 'class="mueu_main_list active"'; } else{ echo 'class="mueu_main_list"'; } ?>
         >
-            <a class="mueu_main_title" href="<?php echo U('Pay/index');?>">
+            <!-- <a class="mueu_main_title" href="<?php echo U('Pay/index');?>">
                 <i class="icon icon-charge"></i>
                 <span style="color:#ff0000">积分充值</span>
                 <span class="new_message">New</span>
-            </a>
+            </a> -->
         </li>
         <!--
         <li class="mueu_main_list">
@@ -108,11 +108,11 @@
     <?php
  if ($Think.MODULE_NAME=='Daili') { echo 'class="mueu_main_list active"'; } else{ echo 'class="mueu_main_list"'; } ?>
         >
-            <a class="mueu_main_title" href="<?php echo U('Daili/index');?>">
+            <!-- <a class="mueu_main_title" href="<?php echo U('Daili/index');?>">
                 <i class="icon icon-agent"></i>
                 <span style="color: #ff0000;">代理</span>
                 <span class="new_message">New</span>
-            </a>
+            </a> -->
         </li>
         
                 
