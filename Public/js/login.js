@@ -52,7 +52,7 @@ $(document).ready(function () {
     function refreshVcode($id, $image)
     {
     	$date = new Date().getTime();
-			$src="index.php?c=vcode&id=" + $id + "&t=" + $date;
+			$src="index.php?m=Base&a=verify&id=" + $id + "&t=" + $date;
 			$image.attr("src", $src);
     }
     
@@ -235,13 +235,14 @@ $(document).ready(function () {
 			return;
 		}
 		
-		$.post("http://www.tdiant.com/js/index.php?c=home&a=resetPwd", { email:$email, vcode:$vcode, ajax:"true"}, onGetPwd );
+		$.post("http://www.tdiant.com/js/index.php?m=User&a=resetPwd", { email:$email, vcode:$vcode, ajax:"true"}, onGetPwd );
     });
     
 	function onGetPwd( $result ) 
 	{
 		var json;
-		eval("json="+$result+";");
+		// eval("json="+$result+";");
+		alert("ok");
 		
 		if( json.result ) {
 			var $toast = new Toast();
