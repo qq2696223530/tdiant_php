@@ -78,14 +78,29 @@ class UserAction extends Action{
 
 		$re=$db->add($data);
 
+		import('ORG.Net.Email');//导入本类
+		$data['mailto'] = $register_email; //收件人
+		$data['subject'] =	'淘点通'; //邮件标题
+		$data['body'] =	'欢迎注册淘点通.'; //邮件正文内容
+		$mail = new Email();
+		if($mail->send($data))
+		{
+		//邮件发送成功...
+			if ($re) {
+				$this->success('注册成功');
+			}
+			else{
+				$this->error("注册失败");
+			}
+		}
+		else
+		{
+		//邮件发送失败...
+		}
+
 		// p($re);
 		// die();
-		if ($re) {
-			$this->success('注册成功');
-		}
-		else{
-			$this->error("注册失败");
-		}
+		
 		
 		//注册功能完善
 	}
