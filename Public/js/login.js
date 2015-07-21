@@ -235,7 +235,7 @@ $(document).ready(function () {
 			return;
 		}
 		
-		$.post("http://www.tdiant.com/js/index.php?m=User&a=resetPwd", { email:$email, vcode:$vcode, ajax:"true"}, onGetPwd );
+		$.post("http://www.tdiant.com/js/index.php?m=User&a=forgetpwd", { email:$email, vcode:$vcode, ajax:"true"}, onGetPwd );
     });
     
 	function onGetPwd( $result ) 

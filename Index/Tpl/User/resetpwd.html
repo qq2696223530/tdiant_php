@@ -1,0 +1,12 @@
+<html>
+	<head>
+		<title>找回密码</title>
+	</head>
+	<body>
+		<form action="{:U('User/resetpwdup')}" method="post">
+		<input type="hidden" value="{$email}"/>
+		新的密码:<input value="text" /><br/>
+		<input type="submit" value="提交"/>
+		</form>
+	</body>
+</html>

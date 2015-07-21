@@ -104,5 +104,48 @@ class UserAction extends Action{
 		
 		//注册功能完善
 	}
+
+	/**
+	 * 找回密码功能
+	 * @return [type] [description]
+	 */
+	public function forgetpwd(){
+		import('ORG.Net.Email');//导入本类
+		$data['mailto'] = $_REQUEST['email']; //收件人
+		$data['subject'] =	'淘点通'; //邮件标题
+		$data['body'] =	'找回密码:<a href="'.U('User/resetpwd').'?code='.md5($_REQUEST['email']).'">点击找回</a>'; //邮件正文内容
+		$mail = new Email();
+		if($mail->send($data)){
+			//邮件发送成功...
+			
+		}
+	}
+
+	/**
+	 * 重置密码输出模版
+	 */
+	public function resetpwd(){
+		$this->assign('email',$_REQUEST['email']);
+		$this->display();
+	}
+
+	/**
+	 * 开始进行重置密码
+	 * @return [type] [description]
+	 */
+	public function resetpwdup(){
+		$data['email']=$_REQUEST['email'];
+		$where=$data;
+		$data['password']=$_REQUEST['password'];
+
+		$db=M("account");
+		$re=$db->where($where)->save($data);
+		if ($re) {
+			$this->success('修改成功',U('Index/index'));
+		}
+		else{
+			$this->error("修改失败");
+		}
+	}
 }
 ?>
