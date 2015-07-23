@@ -256,12 +256,12 @@ $(document).ready(function () {
 	};
 	
     function hideGetPwdError() {
-    	$("#get_password_error").html("");
+    	// $("#get_password_error").html("");
     	$(".forget_password_area .erro_area").hide();
     }
     
     function showGetPwdError($errorMsg) {
-    	$("#get_password_error").html($errorMsg);
+    	// $("#get_password_error").html($errorMsg);
     	$(".forget_password_area .erro_area").show();
     }
 });
